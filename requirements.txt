@@ -1,0 +1,8 @@
+requests
+schedule
+yt-dlp
+cloudinary
+python-dotenv
+pytz
+anthropic
+supabase
