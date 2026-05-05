@@ -40,8 +40,19 @@ INSTAGRAM_ACCOUNTS = {
         "tema": "one_piece",
         "hashtags": "#OnePiece #Luffy #Anime #Pirates",
     },
+    "sr._shanks": {
+        "ig_user_id": "328720317000955",
+        "facebook_page_id": "",
+        "watermark": str(WATERMARK_DIR / "shanks_watermark.png"),
+        "tema": "one_piece",
+        "hashtags": "#OnePiece #RedHair #Shanks #YonkoLife #Anime",
+    },
 }
 
 CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME", "dkigsrmae")
 CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY", "926917235239482")
 CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "-5bvJlprF-PYItTAVs1FP2-CtjI")
+
+DISCORD_WEBHOOK_CHECKPOINT = os.getenv("DISCORD_WEBHOOK_CHECKPOINT", "")
+DISCORD_WEBHOOK_ALERTAS = os.getenv("DISCORD_WEBHOOK_ALERTAS", "")
+DISCORD_WEBHOOK_EXITO = os.getenv("DISCORD_WEBHOOK_EXITO", "")
