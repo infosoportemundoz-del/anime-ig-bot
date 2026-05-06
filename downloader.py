@@ -6,8 +6,7 @@ import requests
 from pathlib import Path
 from datetime import datetime
 import yt_dlp
-from config import DOWNLOADS_DIR, HISTORY_FILE, INSTAGRAM_ACCOUNTS
-
+from config import DOWNLOADS_DIR, HISTORY_FILE, INSTAGRAM_ACCOUNTS, PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASS
 logger = logging.getLogger(__name__)
 
 # Búsquedas para Dailymotion API
@@ -91,6 +90,11 @@ def descargar_video(video_info, cuenta):
         "quiet": True,
         "no_warnings": True,
         "nocheckcertificate": True,
+            "socket_timeout": 60,
+            "http_headers": {
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            },
+            "proxy": f"http://{PROXY_USER}:{PROXY_PASS}@{PROXY_HOST}:{PROXY_PORT}"
     }
     try:
         logger.info(f"  Descargando: {video_info.get('title','')[:50]}")
