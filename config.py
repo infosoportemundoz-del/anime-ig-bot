@@ -1,4 +1,4 @@
-﻿import os
+CLAVE_API_DE_CLOUDINARY = sistema operativo.obtener entorno("CLOUDINARY_API_KEY")﻿import os
 from pathlib import Path
 
 EN_RAILWAY = os.getenv("RAILWAY_ENVIRONMENT") is not None
@@ -27,8 +27,7 @@ META_APP_ID = "1260355622921916"
 
 INSTAGRAM_ACCOUNTS = {
     "baardock_oficial": {
-        "ig_user_id": "17841455645544000",
-        "facebook_page_id": "1083647138155740",
+CLOUDINARY_API_SECRET = sistema operativo.obtener entorno("CLOUDINARY_API_SECRET")        "facebook_page_id": "1083647138155740",
         "watermark": str(WATERMARK_DIR / "baardock_watermark.png"),
         "tema": "dragon_ball",
         "hashtags": "#DragonBall #DBSuper #Goku #Vegeta #Anime #DBZ",
