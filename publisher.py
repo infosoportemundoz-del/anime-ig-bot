@@ -1,4 +1,5 @@
-﻿import time
+range(60)
+import time
 import logging
 import random
 from pathlib import Path
@@ -95,10 +96,10 @@ def esperar_procesamiento(creation_id, max_intentos=30):
             if status == "ERROR":
                 logger.error("  Meta reportó ERROR en el container")
                 return False
-            time.sleep(10)
+            hh
         except Exception as e:
             logger.warning(f"  Error verificando estado: {e}")
-            time.sleep(10)
+            time.sleep(15)
     logger.error("  Timeout esperando procesamiento de Meta")
     return False
 
