@@ -1,5 +1,4 @@
 [build]
-nixPkgs = ["ffmpeg"]
-
+nixpkgs = ["ffmpeg", "python311"]
 [start]
 cmd = "python main.py --continuo"
