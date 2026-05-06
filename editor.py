@@ -1,5 +1,6 @@
 ﻿import logging
 import subprocess
+import traceback
 from pathlib import Path
 from config import DOWNLOADS_DIR, EDITED_DIR, FFMPEG_PATH, INSTAGRAM_ACCOUNTS
 
@@ -17,8 +18,9 @@ def editar_video(input_path, output_path, watermark_path=None):
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         return result.returncode == 0
     except Exception as e:
-        logger.warning(f"  Error: {e}")
-        return False
+logger.error(f"\u274c ERROR CRÍTICO editando video: {e}")
+            logger.error(f"Traceback: {traceback.format_exc()}")
+            logger.error("\u274c Este video NO será publicado")return False
 
 def editar_videos_cuenta(cuenta):
     download_dir = DOWNLOADS_DIR / cuenta
