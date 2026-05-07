@@ -1,4 +1,4 @@
-CLAVE_API_DE_CLOUDINARY = sistema operativo.obtener entorno("CLOUDINARY_API_KEY")﻿import os
+import os
 from pathlib import Path
 
 EN_RAILWAY = os.getenv("RAILWAY_ENVIRONMENT") is not None
@@ -27,7 +27,8 @@ META_APP_ID = "1260355622921916"
 
 INSTAGRAM_ACCOUNTS = {
     "baardock_oficial": {
-CLOUDINARY_API_SECRET = sistema operativo.obtener entorno("CLOUDINARY_API_SECRET")        "facebook_page_id": "1083647138155740",
+        "ig_user_id": "17841455645544000",
+        "facebook_page_id": "1083647138155740",
         "watermark": str(WATERMARK_DIR / "baardock_watermark.png"),
         "tema": "dragon_ball",
         "hashtags": "#DragonBall #DBSuper #Goku #Vegeta #Anime #DBZ",
@@ -48,10 +49,18 @@ CLOUDINARY_API_SECRET = sistema operativo.obtener entorno("CLOUDINARY_API_SECRET
     },
 }
 
-CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME", "dkigsrmae")
-CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY", "926917235239482")
-CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "-5bvJlprF-PYItTAVs1FP2-CtjI")
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME", "")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY", "")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "")
 
 DISCORD_WEBHOOK_CHECKPOINT = os.getenv("DISCORD_WEBHOOK_CHECKPOINT", "")
 DISCORD_WEBHOOK_ALERTAS = os.getenv("DISCORD_WEBHOOK_ALERTAS", "")
 DISCORD_WEBHOOK_EXITO = os.getenv("DISCORD_WEBHOOK_EXITO", "")
+
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+SUBABASE_KEY = os.getenv("SUBABASE_KEY", "")
+
+HOST_PROXY = os.getenv("HOST_PROXY", "")
+PUERTO_PROXY = os.getenv("PUERTO_PROXY", "")
+USUARIO_PROXY = os.getenv("USUARIO_PROXY", "")
+PROXY_PASS = os.getenv("PROXY_PASS", "")
