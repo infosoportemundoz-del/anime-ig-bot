@@ -64,3 +64,8 @@ HOST_PROXY = os.getenv("HOST_PROXY", "")
 PUERTO_PROXY = os.getenv("PUERTO_PROXY", "")
 USUARIO_PROXY = os.getenv("USUARIO_PROXY", "")
 PROXY_PASS = os.getenv("PROXY_PASS", "")
+
+# Aliases for downloader.py compatibility
+PROXY_HOST = HOST_PROXY
+PROXY_PORT = PUERTO_PROXY
+PROXY_USER = USUARIO_PROXY
