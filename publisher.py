@@ -1,4 +1,3 @@
-range(60)
 import time
 import logging
 import random
@@ -22,21 +21,21 @@ cloudinary.config(
 
 GRAPH_API = "https://graph.facebook.com/v25.0"
 
-# Captions por tema - más fuerza de venta y otaku
+# Captions por tema - mÃ¡s fuerza de venta y otaku
 CAPTIONS_DRAGON_BALL = [
-    "El power level de tu estantería necesita subir 👀⚡\nFiguras oficiales en bio 🔥\n\n#DragonBall #DBZ #DBSuper #Goku #Vegeta #Anime #Saiyan #DragonBallZ #AnimeMemes #OtakuEspanol",
-    "Bro, ¿tienes esto en tu cuarto o no eres fan de verdad? 😤\nTienda oficial → link en bio\n\n#DragonBall #Goku #Vegeta #DBZ #Anime #Figura #Coleccionismo #OtakuEspanol #AnimeFigures",
-    "Tu estantería te está pidiendo esto a gritos 👇\nEnvío a España y LATAM 📦 — link en bio\n\n#DragonBall #DBSuper #SSJ #UltraInstinct #Anime #OtakuEspanol #FigurasAnime #Coleccionismo",
-    "La figura del meme existe y es BRUTAL 🔥\n¿La tienes ya? Link en bio 👀\n\n#DragonBall #DBZ #Goku #Vegeta #Anime #AnimeFan #OtakuEspanol #FigurasAnime",
-    "Stock limitado. Los fans de verdad ya lo saben 👀\nLink en bio antes de que se acabe ⚡\n\n#DragonBall #DBSuper #Saiyan #Anime #OtakuEspanol #Coleccionismo #FigurasAnime #DragonBallZ",
+    "El power level de tu estanterÃ­a necesita subir ðâ¡\nFiguras oficiales en bio ð¥\n\n#DragonBall #DBZ #DBSuper #Goku #Vegeta #Anime #Saiyan #DragonBallZ #AnimeMemes #OtakuEspanol",
+    "Bro, Â¿tienes esto en tu cuarto o no eres fan de verdad? ð¤\nTienda oficial â link en bio\n\n#DragonBall #Goku #Vegeta #DBZ #Anime #Figura #Coleccionismo #OtakuEspanol #AnimeFigures",
+    "Tu estanterÃ­a te estÃ¡ pidiendo esto a gritos ð\nEnvÃ­o a EspaÃ±a y LATAM ð¦ â link en bio\n\n#DragonBall #DBSuper #SSJ #UltraInstinct #Anime #OtakuEspanol #FigurasAnime #Coleccionismo",
+    "La figura del meme existe y es BRUTAL ð¥\nÂ¿La tienes ya? Link en bio ð\n\n#DragonBall #DBZ #Goku #Vegeta #Anime #AnimeFan #OtakuEspanol #FigurasAnime",
+    "Stock limitado. Los fans de verdad ya lo saben ð\nLink en bio antes de que se acabe â¡\n\n#DragonBall #DBSuper #Saiyan #Anime #OtakuEspanol #Coleccionismo #FigurasAnime #DragonBallZ",
 ]
 
 CAPTIONS_ONE_PIECE = [
-    "Si eres nakama de verdad, esto tiene que estar en tu cuarto 🏴‍☠️\nTienda oficial → link en bio 👀\n\n#OnePiece #Luffy #Anime #Nakama #Pirates #OtakuEspanol #FigurasAnime #OnePieceMemes",
-    "Tu tripulación te espera en la estantería ⚓\nFiguras oficiales — link en bio 🔥\n\n#OnePiece #Luffy #Zoro #Nami #Anime #OtakuEspanol #Coleccionismo #AnimeFigures",
-    "El sueño del Rey de los Piratas empieza en tu habitación 👑\nLink en bio 🏴‍☠️\n\n#OnePiece #Luffy #GearFive #Anime #OtakuEspanol #FigurasAnime #Nakama",
-    "¿Fan de OP o solo dices que lo eres? 😂\nDemuéstralo — link en bio 🔥\n\n#OnePiece #Anime #Luffy #Shanks #OtakuEspanol #Coleccionismo #FigurasAnime #OnePieceFan",
-    "Stock limitado 👀 Los nakamas reales ya están mirando\nLink en bio antes de que vuele ⚓\n\n#OnePiece #Luffy #Anime #OtakuEspanol #FigurasAnime #Pirates #Coleccionismo",
+    "Si eres nakama de verdad, esto tiene que estar en tu cuarto ð´ââ ï¸\nTienda oficial â link en bio ð\n\n#OnePiece #Luffy #Anime #Nakama #Pirates #OtakuEspanol #FigurasAnime #OnePieceMemes",
+    "Tu tripulaciÃ³n te espera en la estanterÃ­a â\nFiguras oficiales â link en bio ð¥\n\n#OnePiece #Luffy #Zoro #Nami #Anime #OtakuEspanol #Coleccionismo #AnimeFigures",
+    "El sueÃ±o del Rey de los Piratas empieza en tu habitaciÃ³n ð\nLink en bio ð´ââ ï¸\n\n#OnePiece #Luffy #GearFive #Anime #OtakuEspanol #FigurasAnime #Nakama",
+    "Â¿Fan de OP o solo dices que lo eres? ð\nDemuÃ©stralo â link en bio ð¥\n\n#OnePiece #Anime #Luffy #Shanks #OtakuEspanol #Coleccionismo #FigurasAnime #OnePieceFan",
+    "Stock limitado ð Los nakamas reales ya estÃ¡n mirando\nLink en bio antes de que vuele â\n\n#OnePiece #Luffy #Anime #OtakuEspanol #FigurasAnime #Pirates #Coleccionismo",
 ]
 
 
@@ -94,7 +93,7 @@ def esperar_procesamiento(creation_id, max_intentos=30):
             if status == "FINISHED":
                 return True
             if status == "ERROR":
-                logger.error("  Meta reportó ERROR en el container")
+                logger.error("  Meta reportÃ³ ERROR en el container")
                 return False
             hh
         except Exception as e:
@@ -147,10 +146,10 @@ def publicar_reel(cuenta, video_path):
     if not media_id:
         return False
 
-    logger.info(f"  ✅ PUBLICADO en @{cuenta}! Media ID: {media_id}")
+    logger.info(f"  â PUBLICADO en @{cuenta}! Media ID: {media_id}")
     try:
         Path(video_path).unlink()
-        logger.info(f"  🗑️  Video local eliminado")
+        logger.info(f"  ðï¸  Video local eliminado")
     except Exception:
         pass
     return True
