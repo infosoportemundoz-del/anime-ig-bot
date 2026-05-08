@@ -1,4 +1,4 @@
-ï»¿import logging
+Ã¯Â»Â¿import logging
 import subprocess
 import traceback
 from pathlib import Path
@@ -17,7 +17,6 @@ def editar_video(input_path, output_path, watermark_path=None):
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
         return result.returncode == 0
-    except Exception as e:
     except Exception as e:
         logger.error(f"ERROR editando video: {e}")
         logger.error(f"Traceback: {traceback.format_exc()}")
