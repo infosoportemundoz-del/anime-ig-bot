@@ -1,4 +1,4 @@
-﻿import time
+import time
 import logging
 from datetime import datetime
 import pytz
@@ -9,13 +9,13 @@ logger = logging.getLogger(__name__)
 MADRID_TZ = pytz.timezone("Europe/Madrid")
 UTC_TZ = pytz.utc
 
-# Horarios en hora de MADRID (el bot convierte a UTC automáticamente)
+# Horarios en hora de MADRID (el bot convierte a UTC automÃ¡ticamente)
 HORARIOS_MADRID = ["09:00", "13:00", "16:00", "19:30", "22:30"]
 HORAS_DESCARGA = 6
 
 
 def madrid_hora_a_utc(hora_str):
-    """Convierte HH:MM hora Madrid → HH:MM hora UTC (gestiona DST automáticamente)"""
+    """Convierte HH:MM hora Madrid â HH:MM hora UTC (gestiona DST automÃ¡ticamente)"""
     h, m = map(int, hora_str.split(":"))
     ahora = datetime.now(MADRID_TZ)
     t_madrid = MADRID_TZ.localize(datetime(ahora.year, ahora.month, ahora.day, h, m))
@@ -61,12 +61,12 @@ def iniciar_scheduler():
     logger.info(f"Descarga cada {HORAS_DESCARGA}h")
     logger.info(f"Publicacion (Madrid): {', '.join(HORARIOS_MADRID)}")
 
-    # Convertir todos los horarios Madrid → UTC para Railway
+    # Convertir todos los horarios Madrid â UTC para Railway
     horarios_utc = []
     for hora_madrid in HORARIOS_MADRID:
         hora_utc = madrid_hora_a_utc(hora_madrid)
         horarios_utc.append(hora_utc)
-        logger.info(f"   {hora_madrid} Madrid → {hora_utc} UTC (Railway)")
+        logger.info(f"   {hora_madrid} Madrid â {hora_utc} UTC (Railway)")
 
     logger.info("=" * 70)
 
