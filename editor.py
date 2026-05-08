@@ -1,4 +1,4 @@
-Ã¯Â»Â¿import logging
+import logging
 import subprocess
 import traceback
 from pathlib import Path
